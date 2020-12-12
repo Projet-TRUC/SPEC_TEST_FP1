@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Projet TRUC - Script de test FP1
+
 #emplacement du java à utiliser
 JAVA='/opt/microchip/mplabx/v5.40/sys/java/zulu8.36.0.1-ca-fx-jdk8.0.202-linux_x64/jre/bin/java'
 
