@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test PROGTOUT2000</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./classCommande.js"></script>
+    <script src="./MyCommande.js"></script>
+    
+</head>
+
+<body>
+    <h1>
+        <p id="texte">PROGTOUT2000</p>
+    </h1>
+
+    <h2>
+        <form action="/action" method="GET">
+        <br>
+        <p>Programmateur :</p>
+        <div>
+            <input type="radio" id="pk3" name="Programmateur" value="pk3">
+            <label for="pk3">PICkit 3</label>
+          </div>
+          
+          <div>
+            <input type="radio" id="pk4" name="Programmateur" value="pk4">
+            <label for="pk4">PICkit 4</label>
+          </div>
+          
+          <div>
+            <input type="radio" id="icd3" name="Programmateur" value="icd3">
+            <label for="icd3">ICD 3</label>
+          </div>
+        <br>
+
+        <p>Action :</p>
+        <div>
+            <input type="radio" id="prog" name="Action" value="prog">
+            <label for="prog">PROGRAMMER à partir d'un .hex (Exemple PROG : script.sh prog pk3 monfichier.hex)</label>
+          </div>
+
+          <br>
+          <label for="myhexfile">Sélectionner le .hex à charger</label>
+          <input type="file" id="myhexfile" name="HexFile" accept=".hex">
+          <br>
+          
+          <div>
+            <br>
+            <input type="radio" id="read" name="Action" value="read">
+            <label for="read">LIRE ET ENREGISTRE dans un fichier (.hex) (Exemple READ : script.sh read pk4 monfichier.hex)</label>
+          </div>
+
+          <br>
+          <label for="readreturn">Nom du fichier pour stocker la lecture (finir par .hex si possible)</label>
+          <input type="text" id="readreturn" name="ReadReturnFile">
+          <br>
+          
+          <div>
+            <br>
+            <input type="radio" id="raz" name="Action" value="raz">
+            <label for="raz">EFFACER le programme sur le MCU (Exemple RAZ : script.sh raz icd3)</label>
+          </div>
+        <br>
+
+        <button  onclick="MyCommande()" id="zou" type="submit">Allez, zou !</button>
+
+        </form>
+
+    </h2>
+
+</body>
+
+</html>
