@@ -73,16 +73,26 @@ echo 'mauvais arg2 pk3/pk4/icd3'
 exit 1
 fi
 
-#contrôle sur le 3ième argument, si nécessaire
-if [ "$COM_FIN" = "$PROG" ] #|| [ "$COM_FIN" = "$READ" ]
+#contrôle sur le 3ième argument si programmation demandée
+if [ "$COM_FIN" = "$PROG" ]
 then
 if [ -z $fichier ]
 then
-echo 'manque le fichier (arg3)'
+echo 'manque le fichier .hex (arg3)'
 exit 1
 elif [ ! -f "$emplacement/$fichier" ]
 then
 echo 'le fichier n existe pas (dans ce répertoire, arg3)'
+exit 1
+fi
+fi
+
+#contrôle sur le 3ième argument si lecture/enregistrement demandée
+if [ "$COM_FIN" = "$READ" ]
+then
+if [ -z $fichier ]
+then
+echo 'manque le fichier de destination (arg3)'
 exit 1
 fi
 fi
