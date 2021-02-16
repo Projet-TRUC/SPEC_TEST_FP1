@@ -8,6 +8,7 @@ app.use(express.static('./Formulaire'));
 
 app.get('/action', function (req, res) {
 
+  //test sélection d'un programmateur
   if ((req.query.Programmateur!="pk3") && (req.query.Programmateur!="pk4") && (req.query.Programmateur!="icd3"))
   {
     res.send('TU VAS LE PROGRAMMER AVEC TES DOIGTS LE MCU')
@@ -68,7 +69,7 @@ app.get('/action', function (req, res) {
     }
 
   }
-  else if (req.query.Action!="raz")  //alors on veut effacer
+  else if (req.query.Action=="raz")  //alors on veut effacer
   {
     //console.log('Commande = test_script.sh ' + req.query.Action + ' ' + req.query.Programmateur)
     res.send('Commande = test_script.sh ' + req.query.Action + ' ' + req.query.Programmateur)
@@ -85,7 +86,7 @@ app.get('/action', function (req, res) {
   }
   else
   {
-    res.send('FAIS AU MOINS L\'EFFORT DE SELECTIONNER UN TRUC A FAIRE')
+    res.send('FAIS AU MOINS L\'EFFORT DE SELECTIONNER UN TRUC A FAIRE poney')
   }
 
 });
