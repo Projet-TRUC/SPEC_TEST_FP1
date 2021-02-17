@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Projet TRUC - Script de test FP1
+#Anthony TROUVE - DII5A 2020/2021 - EPU TOURS
 
 #emplacement du java à utiliser
 JAVA='/opt/microchip/mplabx/v5.40/sys/java/zulu8.36.0.1-ca-fx-jdk8.0.202-linux_x64/jre/bin/java'
@@ -25,7 +26,7 @@ READ='-GF'
 RAZ='-E'
 #COM_IPE=($PROG $READ $RAZ)
 
-emplacement=`pwd`    #pwd pour l'exemple
+emplacement=`pwd`    	#pwd pour l'exemple
 
 commande="$1"		#premier argument de la commande : la commande (prog, read, raz)
 programmateur="$2"	#deuxième argument de la commande : le programmateur voul (pk3, pk4, icd3)
@@ -38,7 +39,7 @@ fichier="$3"		#troisième argument de la commande : le fichier à programmer / d
 #récupération de la commande et contrôle de base (non vide)
 if [ -z $commande ]
 then
-echo 'mauvais arg1 prog/read/raz'
+echo 'manque arg1 prog/read/raz'
 exit 1
 elif [ $commande = "prog" ]
 then
@@ -57,7 +58,7 @@ fi
 #récupération du programmateur et contrôle de base (non vide)
 if [ -z $programmateur ]
 then
-echo 'mauvais arg2 pk3/pk4/icd3'
+echo 'manque arg2 pk3/pk4/icd3'
 exit 1
 elif [ $programmateur = "pk3" ]
 then
